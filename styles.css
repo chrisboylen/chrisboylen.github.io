@@ -15,8 +15,8 @@ body {
   background-image: radial-gradient(circle, #1d1e22b5, #1d1e22d9, #1d1e22),
     url(./assets/dunes.jpg);
   background-size: cover;
-  border: solid 10px #d4d4dc;
-  color: #d4d4dc;
+  border: solid 10px #e0ded6;
+  color: #e0ded6;
   display: flex;
   flex-direction: column;
   font-family: "Ubuntu", sans-serif;
@@ -35,33 +35,75 @@ section {
 }
 
 header {
-  background: linear-gradient(#252000, #25200000);
   margin: 0;
 }
 
 a {
-  color: #d4d4dc;
+  border: solid 3px transparent;
+  color: #e0ded6;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav:hover,
+.nav:active,
+.yellow-link,
+.name,
+.cta-btn,
+.logo:hover,
+.logo:hover::before {
+  color: #feda6a;
+}
+
+.nav:hover,
+.nav:active {
+  border: solid 3px #feda6a;
+}
+
+.nav:hover::before {
+  border-top-color: #feda6a;
+  border-right-color: #feda6a;
+  transition: width 0.2s ease-out, heigh 0.2s ease-out 0.2s;
+}
+
+.nav:hover::after {
+  border-bottom-color: #feda6a;
+  border-left-color: #feda6a;
+  transition: border-color 0s ease-out 0.5s, width 0.2s ease-out 0.5s,
+    height 0.2s ease-out 0.75s;
 }
 
 .logo {
-  border: solid 5px #d4d4dc;
   display: inline-block;
   height: 13rem;
   margin: 4rem 0;
   text-align: center;
   width: 13rem;
-  transform: rotate(0deg);
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.logo:hover {
-  transform: rotate(-90deg);
-  transition: transform 0.4s ease-in-out;
+.logo::before {
+  border: solid 5px #e0ded6;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  top: 5rem;
+  left: 6rem;
+  z-index: -1;
+  transition: all 0.7s ease-in-out;
 }
 
+.logo:hover::before {
+  transform: rotate(180deg);
+  border: solid 5px #feda6a;
+}
+
+h2,
 .h1,
-.nav {
+.nav,
+.footer {
   text-transform: uppercase;
 }
 
@@ -83,34 +125,149 @@ nav {
   font-size: 1.5rem;
   font-weight: 500;
   margin-right: 4rem;
+  padding: 0 2rem;
 }
 
 main {
   flex: 1 0 auto;
 }
 
-.about {
-  background: #dedede78;
-  clip-path: polygon(50% 0%, 100% 7%, 100% 100%, 0% 100%, 0% 7%);
-  color: #1d1e22;
-  text-align: center;
-}
-
-.p-about {
-  font-size: 3rem;
+section,
+footer,
+.about-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 4rem 0;
 }
 
-.name {
-  color: #feda6a;
+section {
+  background: #e6e6dd33;
+  border-bottom: solid 10px #e0ded6;
+  padding: 6rem 0;
 }
 
+.main,
 footer {
-  display: flex;
-  flex-shrink: 0;
   justify-content: center;
 }
 
+.about,
+.projects,
+.contact {
+  /* background: #fbfbf49e; */
+}
+
+h2,
+.p-about,
+.main,
+.h3-project {
+  /* color: #202024; */
+}
+
+.main {
+  /* background: #e6e6dd5e; */
+  clip-path: polygon(50% 0%, 100% 3%, 100% 100%, 0 100%, 0 3%);
+  min-height: 68vh;
+  text-align: center;
+}
+
+.p-main {
+  font-size: 3rem;
+  max-width: 80rem;
+  padding: 4rem 0;
+}
+
+.about {
+  min-height: 40rem;
+}
+
+.about-wrapper,
+.project {
+  max-width: 70rem;
+}
+
+.about-wrapper {
+  flex-direction: row;
+}
+
+h2 {
+  border-bottom: #e0ded6 solid 3px;
+  font-size: 4rem;
+  padding: 0;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.h3-project {
+  background: #e0ded6;
+  color: #202024;
+  border-radius: 10px 10px 0 0;
+}
+
+.img-project,
+.p-project {
+  padding: 4rem;
+}
+
+.project {
+  background: #15130a5c;
+  border-radius: 10px;
+  box-shadow: 1px 11px 38px 0px rgba(0, 0, 0, 0.45);
+  /* padding: 4rem; */
+  margin: 4rem 0;
+}
+
+.p-project {
+}
+
+.headshot {
+  border-radius: 50%;
+  margin: 0 4rem 0 0;
+}
+
+.contact {
+  border-bottom: 0;
+  clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta-btn {
+  border: solid 3px #feda6a;
+  border-radius: 5px;
+  box-shadow: 1px 7px 16px 1px rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.3rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background: #feda6a;
+  color: red;
+  transform: scale(1.1);
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+.footer {
+  color: #e0ded669;
+}
 .top-img {
   width: 4rem;
+}
+
+@media (max-width: 850px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
 }
