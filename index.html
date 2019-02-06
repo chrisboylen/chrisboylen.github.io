@@ -17,29 +17,128 @@
         <span class="h1">CB</span>
       </a>
       <nav>
-        <a href="" class="nav">about</a>
-        <a href="" class="portfolio nav">portfolio</a>
+        <a href="#top" class="nav">home</a>
+        <a href="#about" class="nav">about</a>
+        <a href="#projects" class="portfolio nav">projects</a>
+        <a href="#contact" class="portfolio nav">contact</a>
       </nav>
     </header>
     <main>
-      <section class="about">
-        <!-- <h2>About</h2> -->
-        <p class="p-about">
-          Hello, I'm <span class="name">Chris Boylen</span>. I'm an
-          architectural photographer turned Software Developer with a focus on
-          the Front End, living in Denver, CO.
+      <section class="main">
+        <p class="p-main" id="main">
+          Hello, I'm <span class="name">Chris Boylen</span>. I'm a Software
+          Developer living in Denver, CO.
         </p>
         <h3></h3>
       </section>
-      <section class="portfolio">
-        <h2>Portfolio</h2>
+      <section class="about" id="about">
+        <h2>About</h2>
+        <div class="about-wrapper">
+          <img
+            class="headshot"
+            src="./assets/head-4.jpg"
+            alt="Headshot photo Chris Boylen"
+          />
+          <p class="p-about">
+            I'm an architectural photographer turned software developer with a
+            focus on the Front End. I'm passionate about collaborating with
+            others to create solutions that exceed the dreams of clients. I
+            truly believe that empathy for the user is the key to good design.
+            <br />
+            <br />
+            I met my wife in Guatemala. I've traveled the Trans-Siberian Railway
+            and the Silk Road. I enjoy hiking, photography, and going on
+            adventures with my daughter.
+            <a class="yellow-link" href="#contact">Contact</a>me with any
+            questions.
+          </p>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-wrapper">
+          <div class="bloom-wrapper project">
+            <h3 class="h3-project">Bloom Trek</h3>
+            <img
+              class="bloom-img img-project"
+              src="./assets/bloom_trek.jpg"
+              alt="Photo of Bloom Trek App"
+            />
+            <p class="p-bloom p-project">
+              The idea for Bloom Trek was born out of a desire to locate hiking
+              trails around Denver that have flowers that are currently
+              blooming. Bloom Trek displays parks near the user's current
+              location and the corresponding blooming flowers/plants in that
+              area for the current (or chosen) month. Trails within a 10-mile
+              radius of the park are displayed as well. The focus of this
+              project was to be able to effectively collaborate and communicate
+              between all members of our group while trying new technologies.
+              Using an agile process to turn well-defined requirements into
+              deployed and production ready software.
+            </p>
+          </div>
+          <div class="photo-wrapper project">
+            <h3 class="h3-project">Photo Buyer</h3>
+            <img
+              class="photo-img img-project"
+              src="./assets/photo-buyer.jpg"
+              alt="Photo of Photo Buyer App"
+            />
+            <p class="p-photo p-project">
+              Photo Buyer allows users to upload, purchase, and edit photos. It
+              also allows users to sign in and create an account that saves
+              their information to a Prisma database and hosts images on
+              Cloudinary. Photo Buyer was built with React using Apollo Client
+              to fetch data with GraphQL and perform mutations while using a
+              GraphQl Yoga server. Buyers can make secure purchases through
+              Stripe and save their orders to the database. Photo Buyer is
+              tested with Jest using the assertion library Enzyme. Check it out
+              <a
+                href="https://photo-buyer-fe-prod.herokuapp.com/"
+                class="yellow-link"
+                >here</a
+              >
+            </p>
+          </div>
+          <div class="snake-wrapper project">
+            <h3 class="h3-project">Escape from New York</h3>
+            <img
+              class="snake-img img-project"
+              src="./assets/snake.jpg"
+              alt="Photo of Snake App"
+            />
+            <p class="p-snake p-project">
+              Escape from New York is recreation of the classic video game
+              snake. I adapted it to have a theme from the 80's movie Escape
+              from New York. Click this
+              <a
+                href="https://30ozsteak.github.io/CB-ND-Gametime-Snake/"
+                class="yellow-link"
+                >link</a
+              >
+              to play.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>contact</h2>
+        <div class="contact-wrapper">
+          <h3>Have questions or comments?</h3>
+          <a
+            href="mailto:chrismboylen@gmail.com?subject=Mail from Portfolio Site"
+            class="cta-btn"
+            >Contact Me</a
+          >
+        </div>
       </section>
     </main>
     <footer>
       <a href="#top" class="footer">
-        <img src="/assets/up-button.png" alt="Return to top Button"
+        <img src="./assets/up-button.png" alt="Return to top Button"
         class=-"top-img"/>
       </a>
+      <p class="footer">chris boylen &copy; 2019</p>
     </footer>
   </body>
 </html>
