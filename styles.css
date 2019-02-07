@@ -91,7 +91,6 @@ a {
   height: 13rem;
   top: 5rem;
   left: 6rem;
-  z-index: -1;
   transition: all 0.7s ease-in-out;
 }
 
@@ -130,10 +129,16 @@ nav {
 
 section,
 footer,
-.about-wrapper {
+.about-wrapper,
+.project {
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+section,
+footer,
+.about-wrapper {
   padding: 4rem 0;
 }
 
@@ -161,6 +166,7 @@ footer {
 
 p {
   font-size: 1.7rem;
+  margin: 2rem;
 }
 
 .p-main {
@@ -193,6 +199,7 @@ h3 {
   margin: 0 0 2rem 0;
   text-align: center;
   padding: 0.5rem 0;
+  width: 100%;
 }
 
 .h3-project {
@@ -263,5 +270,44 @@ footer {
 @media (max-width: 850px) {
   .about-wrapper {
     flex-direction: column;
+  }
+  .headshot {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    border: 0;
+  }
+
+  .logo::before {
+    top: 4rem;
+    left: 5rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .p-main {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .h3-project {
+    border-radius: 0;
+  }
+
+  img {
+    max-width: 40rem;
+  }
+
+  .img-project,
+  .p-project {
+    padding: 2rem;
   }
 }
