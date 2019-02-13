@@ -63,7 +63,7 @@ a {
 .nav:hover::before {
   border-top-color: #feda6a;
   border-right-color: #feda6a;
-  transition: width 0.2s ease-out, heigh 0.2s ease-out 0.2s;
+  transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
 }
 
 .nav:hover::after {
@@ -153,9 +153,18 @@ footer {
   justify-content: center;
 }
 
-.about,
-.projects,
-.contact {
+.yellow-link {
+  padding: 0 0 4px 0;
+}
+
+.yellow-link:hover {
+  border-bottom: 2px solid #feda6a;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.yellow-link:hover::after {
+  color: #feda6a;
+  width: calc(100% - 60px);
 }
 
 .main {
